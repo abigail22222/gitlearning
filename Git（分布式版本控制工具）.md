@@ -565,7 +565,17 @@ GitLab （地址： https://about.gitlab.com/ ）是一个用于仓库管理系�
 
 ### 4.1.0、GitHub
 
-下载GitHub desktop，用自己的GitHub账号登陆，可以省略配置公钥操作、手动获取本地仓库、手动在网页上创建远程仓库、手动添加远程仓库等操作，很方便
+- 下载GitHub desktop，用自己的GitHub账号登陆，可以省略配置公钥操作、手动获取本地仓库、手动在网页上创建远程仓库、手动添加远程仓库等操作，很方便
+
+- 虚拟机没下载GitHub desktop还是只能手动配；
+
+- 想把本地的仓库push到远程仓库（也就是网页里展示的仓库），先要在网页创建一个新的仓库；
+
+- 如果一台新主机要登陆网站，请用SSH的方式登陆；注意如果你使用SSH登陆，远程仓库的地址必须是SSH的形式（git@github.com:username/repo.git）
+
+- 如果远程仓库的地址是 https://github.com/username/repo.git，Git 默认使用用户名和密码（GitHub现在不支持命令行用 用户名密码 来登录网站）（或 GitHub 的 Personal Access Token，简称 PAT）进行身份验证，而不是 SSH。配置 SSH 是可选的
+
+- 如果你要push到网页的本地仓库是从别人那里弄过来的比如说是fetch过来的，那你这个仓库就已经有一个远程仓库的地址了（就是fetch用的这个地址)；你想把这个本地仓库push到你自己新建的网页远程仓库时，要先把旧的远程仓库的地址给删掉`git remote remove origin` 不然会报错：`error: remote origin already exists.`
 
 ### 4.2、 注册码云
 
