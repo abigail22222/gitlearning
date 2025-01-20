@@ -575,7 +575,7 @@ GitLab （地址： https://about.gitlab.com/ ）是一个用于仓库管理系�
 
 - 如果远程仓库的地址是 https://github.com/username/repo.git，Git 默认使用用户名和密码（GitHub现在不支持命令行用 用户名密码 来登录网站）（或 GitHub 的 Personal Access Token，简称 PAT）进行身份验证，而不是 SSH。配置 SSH 是可选的
 
-- 如果你要push到网页的本地仓库是从别人那里弄过来的比如说是fetch过来的，那你这个仓库就已经有一个远程仓库的地址了（就是fetch用的这个地址)；你想把这个本地仓库push到你自己新建的网页远程仓库时，要先把旧的远程仓库的地址给删掉`git remote remove origin` 不然会报错：`error: remote origin already exists.`
+- 如果你要push到网页的本地仓库是从别人那里弄过来的比如说是clone过来的，那你这个仓库就已经有一个远程仓库的地址了（就是clone用的这个地址)；你想把这个本地仓库push到你自己新建的网页远程仓库时，要先把旧的远程仓库的地址给删掉`git remote remove origin` 不然会报错：`error: remote origin already exists.`
 
 ### 4.2、 注册码云
 
